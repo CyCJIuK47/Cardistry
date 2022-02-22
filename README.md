@@ -26,7 +26,7 @@ Then follow [**these**](https://github.com/MicrosoftDocs/cpp-docs/blob/main/docs
 
 ## Contribution
 Cardistry is open to contribution. If you find a bug or want to contribute code, tests or ideas - open a new GitHub pull request.
-To see how you can help this project check [**Issues**](https://github.com/CyCJIuK47/Cardistry/issues) or [**Future Scope**](https://github.com/CyCJIuK47/Cardistry/edit/main/README.md#future-scope) section.
+To see how you can help this project check [**Issues**](https://github.com/CyCJIuK47/Cardistry/issues) or [**Future Scope**](https://github.com/CyCJIuK47/Cardistry#future-scope) section.
 
 ## Future Scope
 Implement `EquityCalculator` class for evaluating poker moves: check, bet, all-in and fold.
