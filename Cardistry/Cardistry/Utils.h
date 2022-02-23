@@ -54,7 +54,7 @@ namespace Cardistry {
 			return split_map;
 		}
 
-		std::vector<Card> n_heighest(std::vector<Card>& cadrs, int n)
+		std::vector<Card> n_highest(std::vector<Card>& cadrs, int n)
 		{
 			std::vector<Card> sorted = cadrs;
 			std::sort(sorted.begin(), sorted.end());
@@ -62,7 +62,7 @@ namespace Cardistry {
 			return std::vector<Card>(sorted.rbegin(), sorted.rbegin() + std::min(n, int(sorted.size())));
 		}
 
-		std::vector<Card> n_heighest_except(std::vector<Card>& cards, std::vector<Card> except, int n)
+		std::vector<Card> n_highest_except(std::vector<Card>& cards, std::vector<Card> except, int n)
 		{
 			struct CardCmp {
 				bool operator() (Card a, Card b) const {

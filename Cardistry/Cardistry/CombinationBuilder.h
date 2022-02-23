@@ -102,7 +102,7 @@ namespace Cardistry {
 			{
 				if (it.second.size() >= 5)
 				{
-					return Utils::n_heighest(it.second, 5);
+					return Utils::n_highest(it.second, 5);
 				}
 			}
 			return kickers;
@@ -183,7 +183,7 @@ namespace Cardistry {
 
 			if (!kickers.empty())
 			{
-				std::vector<Card> rest_kickers = Utils::n_heighest_except(cards, kickers, 1);
+				std::vector<Card> rest_kickers = Utils::n_highest_except(cards, kickers, 1);
 				kickers.insert(kickers.end(), rest_kickers.begin(), rest_kickers.end());
 			}
 
@@ -206,7 +206,7 @@ namespace Cardistry {
 
 			if (!kickers.empty())
 			{
-				std::vector<Card> rest_kickers = Utils::n_heighest_except(cards, kickers, 2);
+				std::vector<Card> rest_kickers = Utils::n_highest_except(cards, kickers, 2);
 				kickers.insert(kickers.end(), rest_kickers.begin(), rest_kickers.end());
 			}
 
@@ -229,7 +229,7 @@ namespace Cardistry {
 
 			if (!kickers.empty())
 			{
-				std::vector<Card> rest_kickers = Utils::n_heighest_except(cards, kickers, 3);
+				std::vector<Card> rest_kickers = Utils::n_highest_except(cards, kickers, 3);
 				kickers.insert(kickers.end(), rest_kickers.begin(), rest_kickers.end());
 			}
 
@@ -253,7 +253,7 @@ namespace Cardistry {
 							kickers.insert(kickers.end(), split_map[Value(i)].begin(), split_map[Value(i)].end());
 							kickers.insert(kickers.end(), split_map[Value(j)].begin(), split_map[Value(j)].end());
 
-							std::vector<Card> rest_kickers = Utils::n_heighest_except(cards, kickers, 3);
+							std::vector<Card> rest_kickers = Utils::n_highest_except(cards, kickers, 3);
 							kickers.insert(kickers.end(), rest_kickers.begin(), rest_kickers.end());
 
 							return kickers;
@@ -267,8 +267,7 @@ namespace Cardistry {
 
 		std::vector<Card> _is_high_card(std::vector<Card>& cards)
 		{
-			std::vector<Card> kickers(cards.begin(), cards.begin() + (std::min(5, int(cards.size()))));
-			return kickers;
+			return Utils::n_highest(cards, 5);
 		}
 	};
 }
